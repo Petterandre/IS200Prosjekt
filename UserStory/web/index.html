@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <link rel="stylesheet" href="stylesheets/mother.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <head>
+        <title>Modulhåndtering</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<div id="wrapper">
+    <div id="header">
+        
+        
+        
+    </div>
+    <div id="navbar"><a href="index.html">Hjem</a></div>
+   <div id="content">
+       <br><br><br><br>
+       <h1><a href ="#" id="viewModule">Se moduler</a></h1>
+       <br>
+       <h1><a href ="#" id="addModule">Legg til modul</a></h1>
+       <br>
+       <h1><a href ="#" id="editModule">Endre modul</a></h1>
+       <br>
+       <h1><a href ="#" id="removeModule">Slette modul</a></h1>
+       
+       
+       
+   </div>
+   <div id="footer"></div>
+</div>
+        
+    </body>
+    <script>
+    $(document).ready( function() {
+    $("#addModule").on("click", function() {
+        $("#content").load("addmodule.html");
+    });
+    $("#editModule").on("click", function() {
+        $("#content").load("editmodule.html");
+    });
+    $("#removeModule").on("click", function() {
+        $("#content").load("removemodule.html");
+    });
+    $("#viewModule").on("click", function() {
+        $("#content").load("viewmodule.html");
+    });
+});
+    </script>
+</html>
+

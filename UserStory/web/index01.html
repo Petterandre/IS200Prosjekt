@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <link rel="stylesheet" href="stylesheets/stylesheet.css">
+    <script src="js/newjavascript.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <head>
+        <title>Registrer Bruker!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="wrapper">
+            <!--<div id="links">
+                <a href ="index.html"> HOME </a>
+                <a href ="#" onclick="studentadd()"> ADD STUDENT </a>
+                <a href ="#" onclick="studentedit()"> EDIT STUDENT INFO</a>
+                <a href ="#" onclick="studentremove()"> REMOVE STUDENT </a>
+                <a href ="#" onclick="studentgetinfo()"> LOAD STUDENT INFO</a>
+            </div>-->
+
+            <div id="content">
+                <br><br><br>
+                <div id="hentVerdier">
+                    <h2>Hent brukere</h2>
+            <form action="hentServlet" method="post">
+                
+                <input type="Submit" name="hent" value="Hent veridene">
+            </form>
+                </div><br><br><br>
+                <hr>
+                
+            <form action="leggtilServlet" method="post">
+                <h2>Legg til bruker</h2>
+                <h3>Brukernavn</h3>
+                <input type="text" name="brukernavn">
+                <h3>Passord</h3>
+                <input type="password" name="passord">
+                <h3>E-post</h3>
+                <input type="text" name="epost">
+                <h3>Brukertype</h3>
+                Lecturer
+                <input type="radio" name="brukertype" value="Lect"><br>
+                Student
+                <input type="radio" name="brukertype" value="Stud" checked>
+                <br><br>
+                <input type="Submit" name="leggtil" value="Legg til bruker">
+            </form>
+                <hr>
+                <br><br><br>
+                
+                
+                    <h2>Endre på bruker</h2>
+                    <form action="endreServlet" method="post">
+                    <h3>Brukernavn</h3>
+                    <input type="text" name="usern" ><br>
+                    <h3>E-post</h3>
+                    <input type="text" name="epost" ><br><br>                  
+                    <input type="Submit" name="endreBruker" value="Endre på bruker"><br>
+                    </form>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+                
+                <h2>Slette bruker</h2>
+                <form action="slettServlet" method="post">
+                    
+                    <h3>Brukernavn du ønsker å slette</h3>
+                    <input type="text" name="user">
+                    <br><br>
+                    <input type="Submit" name="slettBruker" value="Slett bruker?" onclick="return confirm('Er du sikker du vil slette brukeren?')">
+                </form>
+                <br><br><br>
+            </div>                
+            </div>
+
+    </body>
+</html>
